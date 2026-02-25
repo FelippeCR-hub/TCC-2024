@@ -1,3 +1,4 @@
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ div {
     padding-top: 0;
 }
 
+/* Navbar */
 body {
     margin: 0;
     padding: 0;
@@ -38,25 +40,30 @@ p {
     height: 60px;
     position: relative;
     margin-bottom: -20px;
+    /* Certifique-se que a navbar não tenha margem inferior */
 }
 
 
 .navbar .logo {
     margin-left: 20px;
+    /* Margem para a logo */
 }
 
 .logo-image {
     height: 50px;
+    /* Aumente a altura da imagem da logo conforme necessário */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     margin: 0;
+    /* Remove margem padrão */
 }
 
 .nav-links li {
     margin: 0 20px;
+    /* Espaçamento lateral entre os links */
 }
 
 .nav-links a {
