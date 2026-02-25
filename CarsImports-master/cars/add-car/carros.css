@@ -1,0 +1,45 @@
+body{
+    background: url('fundo.jpg') no-repeat center center/cover;
+}
+.cars-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    color: white;
+}
+.car-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: 220px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.car-card img {
+    width: 100%;
+    border-radius: 4px;
+}
+.price {
+    color: green;
+    font-weight: bold;
+}
+.details-button {
+    background-color:
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+}
+.details-button:hover {
+    background-color:
+}
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    color:
+}
