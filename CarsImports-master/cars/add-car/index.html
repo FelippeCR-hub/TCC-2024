@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,33 +10,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <header class="navbar">
         <div class="container">
             <a href="/" class="logo">
                 <img src="/logo.png" alt="Cars Imports" class="logo-img">
             </a>
+
             <nav class="nav-menu">
                 <a href="../../inicio.html" class="nav-link">
                     <i class="fas fa-home"></i> Início
                 </a>
+
                 <a href="../luxos/luxury-cars.html" class="nav-link">
                     <i class="fas fa-crown"></i> Carros de Luxo
                 </a>
+
                 <a href="../usados/used-cars.html" class="nav-link">
                     <i class="fas fa-car"></i> Carros Usados
                 </a>
+
                 <a href="../novos/new-cars.html" class="nav-link">
                     <i class="fas fa-car-side"></i> Carros Novos
                 </a>
+
                 <a href="./index.html" class="nav-link active">
                     <i class="fas fa-plus-circle"></i> Adicionar
                 </a>
+
                 <a href="https://api.whatsapp.com/send/?phone=5511986981750" class="nav-link">
                     <i class="fab fa-whatsapp"></i> Contato
                 </a>
+
                 <a href="/login.php" class="nav-link login-btn">Login</a>
             </nav>
+
             <button class="nav-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -43,8 +53,10 @@
             </button>
         </div>
     </header>
+
     <div class="form-container">
         <h2><i class="fas fa-car-side"></i> Adicionar Carro</h2>
+
         <form id="carForm">
             <div class="form-row">
                 <div class="form-group">
@@ -58,6 +70,7 @@
                     </select>
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="form-group">
                     <label><i class="fas fa-building"></i> Marca:</label>
@@ -101,6 +114,7 @@
                     </select>
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="form-group">
                     <label><i class="fas fa-tachometer-alt"></i> Quilometragem:</label>
@@ -125,6 +139,7 @@
                     </select>
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="form-group">
                     <label><i class="fas fa-gas-pump"></i> Combustível:</label>
@@ -144,6 +159,7 @@
                     <input type="number" id="potencia" min="100" max="1000" required placeholder="100-1000 cv">
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="form-group">
                     <label><i class="fas fa-cog"></i> Câmbio:</label>
@@ -167,6 +183,7 @@
                     </select>
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="form-group">
                     <label><i class="fas fa-chair"></i> Número de assentos:</label>
@@ -189,12 +206,15 @@
                     </select>
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="form-group full-width">
                     <label><i class="fas fa-list-ul"></i> Equipamentos e Acessórios:</label>
-                    <textarea id="equipamentos" rows="4" required placeholder="Liste os equipamentos e acessórios do veículo"></textarea>
+                    <textarea id="equipamentos" rows="4" required
+                        placeholder="Liste os equipamentos e acessórios do veículo"></textarea>
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="form-group">
                     <label><i class="fas fa-dollar-sign"></i> Valor (R$):</label>
@@ -205,11 +225,14 @@
                     <input type="file" id="imagem" accept="image/*" multiple required>
                 </div>
             </div>
+
             <button type="submit">
                 <i class="fas fa-plus-circle"></i> Adicionar Carro
             </button>
         </form>
     </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

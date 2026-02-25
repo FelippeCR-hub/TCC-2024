@@ -1,10 +1,12 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-main, section, div {
+
+main,
+section,
+div {
     margin-top: 0;
     padding-top: 0;
 }
@@ -14,11 +16,15 @@ body {
     padding: 0;
 }
 
-header, main, footer {
+header,
+main,
+footer {
     margin: 0;
     padding: 0;
 }
-h1, p {
+
+h1,
+p {
     margin-top: 0;
 }
 
@@ -62,6 +68,7 @@ h1, p {
 .nav-links a:hover {
     color: #FF0000;
 }
+
 section {
     margin-top: -20px;
 }

@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cars Imports</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <h1>Financiamento do Carro</h1>
         <form id="financingForm">
             <input type="hidden" id="carValue">
+
             <label for="bank"><i class="fas fa-building"></i> Escolha o Banco:</label>
             <div class="bank-options">
                 <label class="bank-option">
@@ -52,6 +56,7 @@
                     <input type="radio" name="bank" value="0.030" required>
                 </label>
             </div>
+
             <div class="months-section">
                 <label for="months">Número de Meses:</label>
                 <div class="input-wrapper">
@@ -59,6 +64,9 @@
                     <input type="number" id="months" placeholder="Ex: 12" value="12" min="1" required>
                 </div>
             </div>
+
+
+
             <div class="insurance-section">
                 <label for="insurance"><i class="fas fa-shield-alt"></i> Escolha a Seguradora:</label>
                 <div class="insurance-options">
@@ -94,6 +102,11 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+
             <div class="warranty-section">
                 <i class="fas fa-shield-alt"></i> <!-- Ícone de garantia -->
                 <label for="warranty">Selecione a Garantia:</label>
@@ -103,11 +116,16 @@
                     <option value="Completa">Garantia Completa - 3 anos</option>
                 </select>
             </div>
+
+
             <button type="submit">Calcular Financiamento</button>
         </form>
+
         <div id="result" class="result"></div>
         <a href="../onix.html" class="back-button">← Voltar para Detalhes do Carro</a>
     </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

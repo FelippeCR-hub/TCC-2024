@@ -1,29 +1,50 @@
 function showPaymentForm(type) {
     document.querySelector('.form-container').style.display = 'none';
     document.querySelector('.boleto-container').style.display = 'none';
+
     if (type === 'cartao') {
         document.querySelector('.form-container').style.display = 'block';
     } else if (type === 'boleto') {
         document.querySelector('.boleto-container').style.display = 'block';
     }
 }
+
 function generateBoleto() {
     const boletoContainer = document.querySelector('.boleto-details');
-    const valorOriginal = 160000.00; 
-    const percentualJuros = 3; 
-    const meses = 12; 
+
+
+    const valorOriginal = 160000.00;
+    const percentualJuros = 3;
+    const meses = 12;
+
+
     const valorTotal = valorOriginal + (valorOriginal * percentualJuros / 100);
     const valorPrestacao = valorTotal / meses;
-    const valorOriginalFormatted = valorOriginal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    const valorTotalFormatted = valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    const valorPrestacaoFormatted = valorPrestacao.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    const codigoBarras = "34191.09000 00000.123456 78900.000001 1 234567890123"; 
+
+
+    const valorOriginalFormatted = valorOriginal.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+    const valorTotalFormatted = valorTotal.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+    const valorPrestacaoFormatted = valorPrestacao.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+
+    const codigoBarras = "34191.09000 00000.123456 78900.000001 1 234567890123";
+
+
     const dataVencimento = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString('pt-BR');
     const beneficiario = "Cars Imports";
     const cedente = "Banco do Brasil";
     const pagador = " Maria Fernanda Costa";
     const cpfPagador = "987.654.321-00";
-    const nossoNumero = "11 986981750"; 
+    const nossoNumero = "11 986981750";
+
     boletoContainer.innerHTML = `
         <div class="boleto">
             <div class="boleto-header">
@@ -50,14 +71,19 @@ function generateBoleto() {
         </div>
     `;
 }
+
+
 function copyCodigoBarras() {
     const codigoBarrasElement = document.getElementById("codigoBarras");
     const codigoBarras = codigoBarrasElement.innerText;
+
+
     const tempInput = document.createElement("input");
     tempInput.value = codigoBarras;
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand("copy");
     document.body.removeChild(tempInput);
+
     alert("Código de barras copiado para a área de transferência!");
 }

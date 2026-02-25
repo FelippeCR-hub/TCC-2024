@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,26 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- AOS Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
     <header class="navbar">
         <div class="nav-container">
             <a href="../../../index.html" class="logo">
                 <img src="../../../logo.png" alt="Logo" class="logo-img">
             </a>
+
             <button class="hamburger" aria-label="Menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
+
             <nav class="nav-menu">
                 <ul class="nav-links">
                     <li><a href="../inicio.html"><i class="fas fa-home"></i> Início</a></li>
@@ -28,14 +35,15 @@
                     <li><a href="../cars/usados/used-cars.html"><i class="fas fa-car"></i> Carros Usados</a></li>
                     <li><a href="../cars/novos/new-cars.html"><i class="fas fa-car-side"></i> Carros Novos</a></li>
                     <li><a href="../cars/add-car/index.html"><i class="fas fa-plus-circle"></i> Adicionar</a></li>
-                    <li><a href="https://api.whatsapp.com/send/?phone=5511986981750"><i class="fab fa-whatsapp"></i> Contato</a></li>
+                    <li><a href="https://api.whatsapp.com/send/?phone=5511986981750"><i class="fab fa-whatsapp"></i>
+                            Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
     <!-- Car Showcase Section -->
     <section class="car-showcase">
         <div class="car-images">
@@ -50,13 +58,17 @@
                 <img src="roda.jpg" alt="Carro 7" class="thumbnail" onclick="openLightbox('roda.jpg')">
                 <img src="motor.jpg" alt="Carro 8" class="thumbnail" onclick="openLightbox('motor.jpg')">
                 <img src="porta.jpg" alt="Carro 9" class="thumbnail" onclick="openLightbox('porta.jpg')">
+
             </div>
         </div>
         <div class="car-details">
             <h1>Rolls-Royce Phantom - Ano 2023</h1>
             <h2>Preço: R$ 2.200.000,00</h2>
             <p class="info">Localização: São Paulo, SP</p>
-            <p class="highlights">O Rolls-Royce Phantom redefine o luxo automotivo. Com desempenho incomparável, é a escolha perfeita para quem busca sofisticação e exclusividade. Pronto para transferência imediata e sem histórico de acidentes.</p>
+            <p class="highlights">O Rolls-Royce Phantom redefine o luxo automotivo. Com desempenho incomparável, é a
+                escolha perfeita para quem busca sofisticação e exclusividade. Pronto para transferência imediata e sem
+                histórico de acidentes.</p>
+
             <div class="cta-buttons">
                 <div class="cta-buttons">
                     <a href="./pagamento/pagamento.html" class="buy-now"> Compre Agora</a>
@@ -65,11 +77,15 @@
                     <a href="./financiamento/financing.html?value=2200000" class="finance-button"> Financiar Carro</a>
                 </div>
             </div>
+
             <p class="description">
-                Este Rolls-Royce Phantom combina um motor V12 potente com um interior refinado, oferecendo uma experiência de direção incomparável. Um ícone de prestígio, o Phantom é a personificação do luxo sobre rodas.
+                Este Rolls-Royce Phantom combina um motor V12 potente com um interior refinado, oferecendo uma
+                experiência de direção incomparável. Um ícone de prestígio, o Phantom é a personificação do luxo sobre
+                rodas.
             </p>
         </div>
     </section>
+
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
         <span class="close" onclick="closeLightbox()">&times;</span>
@@ -78,6 +94,7 @@
         <img class="lightbox-content" id="lightbox-image">
         <span class="next" onclick="changeImage(1)">&#10095;</span>
     </div>
+
     <!-- Car Specifications -->
     <section class="specifications">
         <h3>Detalhes do veículo</h3>
@@ -93,6 +110,7 @@
             <li><strong>Assentos:</strong> 5</li>
         </ul>
     </section>
+
     <!-- Equipment Section -->
     <section class="equipment">
         <h3>Equipamentos e Acessórios</h3>
@@ -108,6 +126,7 @@
             <li>Teto panorâmico</li>
         </ul>
     </section>
+
     <!-- Contact Section -->
     <section class="contact">
         <h3>Entre em Contato</h3>
@@ -116,6 +135,8 @@
             <a href="vendedor.html" class="contact-button">Falar com o Vendedor</a>
         </div>
     </section>
+
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -8,13 +8,16 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
+
     <header class="navbar">
         <div class="container">
             <a href="/" class="logo">
                 <img src="../../logo.png" alt="Cars Imports" class="logo-img">
             </a>
+            
             <nav class="nav-menu">
                 <a href="../../inicio.html" class="nav-link">
                     <i class="fas fa-home"></i> Início
@@ -36,11 +39,13 @@
                 </a>
                 <a href="login.php" class="nav-link login-btn">Login</a>
             </nav>
+
             <button class="nav-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
             <button class="hamburger">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -48,6 +53,8 @@
             </button>
         </div>
     </header>
+
+    
  <!-- Seção de Filtros -->
  <section class="filters-section">
     <!-- Cabeçalho Mobile -->
@@ -57,6 +64,7 @@
             <i class="fas fa-times"></i>
         </button>
     </div>
+
     <div class="filters-wrapper">
         <!-- Título e Botões de Controle -->
         <div class="filters-controls">
@@ -64,6 +72,7 @@
                 <i class="fas fa-car-alt"></i>
                 <h2>Encontre seu Carro de Luxo</h2>
             </div>
+            
             <div class="filters-buttons">
                 <button class="filter-btn primary">
                     <i class="fas fa-filter"></i>
@@ -75,6 +84,7 @@
                 </button>
             </div>
         </div>
+
         <!-- Container de Filtros -->
         <div class="filters-container">
             <!-- Filtro de Preço -->
@@ -90,6 +100,7 @@
                     <option value="acima-400000">Acima de R$ 400.000</option>
                 </select>
             </div>
+
             <!-- Filtro de Cor -->
             <div class="filter-item">
                 <div class="filter-header">
@@ -105,6 +116,7 @@
                     <option value="vermelho">Vermelho</option>
                 </select>
             </div>
+
             <!-- Filtro de Marca -->
             <div class="filter-item">
                 <div class="filter-header">
@@ -123,6 +135,7 @@
                     <option value="maserati">Maserati</option>
                 </select>
             </div>
+
             <!-- Filtro de Categoria -->
             <div class="filter-item">
                 <div class="filter-header">
@@ -142,6 +155,7 @@
         </div>
     </div>
 </section>
+
 <!-- Container Principal dos Cards -->
 <main class="cars-container">
     <div class="container">
@@ -165,6 +179,7 @@
                     <a href="./a3/a3.html" class="service-button">Mais Detalhes</a>
                 </div>
             </div>
+
             <!-- Card 2 - Mercedes C-Class -->
             <div class="card" 
                  data-price="220000" 
@@ -184,6 +199,7 @@
                     <a href="./cclass/cclass.html" class="service-button">Mais Detalhes</a>
                 </div>
             </div>
+
             <!-- Card 3 - Land Rover Discovery Sport -->
             <div class="card" 
                  data-price="300000" 
@@ -203,6 +219,7 @@
                     <a href="./sport/sport.html" class="service-button">Mais Detalhes</a>
                 </div>
             </div>
+
             <!-- Card - BMW 1500 -->
             <div class="card" 
                  data-price="450000" 
@@ -222,6 +239,7 @@
                     <a href="./1500/1500.html" class="service-button">Mais Detalhes</a>
                 </div>
             </div>
+
             <!-- Card - Porsche Macan -->
             <div class="card" 
                  data-price="580000" 
@@ -241,6 +259,7 @@
                     <a href="./macan/macan.html" class="service-button">Mais Detalhes</a>
                 </div>
             </div>
+
             <!-- Card - BMW Serie 7 -->
             <div class="card" 
                  data-price="890000" 
@@ -260,6 +279,7 @@
                     <a href="./serie7/serie7.html" class="service-button">Mais Detalhes</a>
                 </div>
             </div>
+
             <!-- Card - Volvo V60 -->
             <div class="card" 
                  data-price="380000" 
@@ -279,6 +299,7 @@
                     <a href="./v60/v60.html" class="service-button">Mais Detalhes</a>
                 </div>
             </div>
+
             <!-- Card - Studio Ghibli -->
             <div class="card" 
                  data-price="750000" 
@@ -298,14 +319,18 @@
                     <a href="./ghibli/ghibli.html" class="service-button">Mais Detalhes</a>
                 </div>
             </div>
+
         </div>
     </div>
 </main>
+
 <!-- Elementos Mobile -->
 <button class="mobile-filter-btn">
     <i class="fas fa-filter"></i>
 </button>
+
 <div class="filter-overlay"></div>
+
     <script src="script.js"></script>
     <script src="menu.js"></script>
 </body>

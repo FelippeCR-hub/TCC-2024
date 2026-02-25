@@ -1,6 +1,7 @@
 function popularAnosSelect() {
     const anoSelect = document.getElementById('ano');
     const anoAtual = new Date().getFullYear() + 1;
+
     for (let ano = anoAtual; ano >= 1990; ano--) {
         const option = document.createElement('option');
         option.value = ano;
@@ -8,9 +9,15 @@ function popularAnosSelect() {
         anoSelect.appendChild(option);
     }
 }
+
+
 document.addEventListener('DOMContentLoaded', popularAnosSelect);
-document.getElementById('carForm')?.addEventListener('submit', function(event) {
+
+
+document.getElementById('carForm')?.addEventListener('submit', function (event) {
     event.preventDefault();
+
+
     const nome = document.getElementById('nome').value;
     const marca = document.getElementById('marca').value;
     const cor = document.getElementById('cor').value;
@@ -23,28 +30,50 @@ document.getElementById('carForm')?.addEventListener('submit', function(event) {
     const numAssentos = document.getElementById('numAssentos').value;
     const combustivel = document.getElementById('combustivel').value;
     const cambio = document.getElementById('cambio').value;
+
+
     const imagens = document.getElementById('imagem').files;
     let imagensArray = [];
     for (let i = 0; i < imagens.length; i++) {
         const url = URL.createObjectURL(imagens[i]);
         imagensArray.push(url);
     }
+
+
     const carros = JSON.parse(localStorage.getItem('carros')) || [];
-    carros.push({ 
-        nome, marca, cor, estado, valor, detalhes, imagensArray,
-        ano, categoria, numPortas, numAssentos, combustivel, cambio 
+    carros.push({
+        nome,
+        marca,
+        cor,
+        estado,
+        valor,
+        detalhes,
+        imagensArray,
+        ano,
+        categoria,
+        numPortas,
+        numAssentos,
+        combustivel,
+        cambio
     });
     localStorage.setItem('carros', JSON.stringify(carros));
+
+
     window.location.href = 'pp.html';
 });
-window.onload = function() {
+
+
+window.onload = function () {
     if (window.location.pathname.endsWith('pp.html')) {
         const carros = JSON.parse(localStorage.getItem('carros')) || [];
         const carsList = document.getElementById('carsList');
-        carsList.innerHTML = ''; 
+        carsList.innerHTML = '';
+
         carros.forEach(car => {
             const carCard = document.createElement('div');
             carCard.classList.add('car-card');
+
+
             if (car.imagensArray && car.imagensArray.length > 0) {
                 const imageContainer = document.createElement('div');
                 imageContainer.classList.add('image-container');
@@ -56,8 +85,11 @@ window.onload = function() {
                 });
                 carCard.appendChild(imageContainer);
             }
+
+
             const infoDiv = document.createElement('div');
             infoDiv.classList.add('car-info');
+
             infoDiv.innerHTML = `
                 <h3>${car.nome}</h3>
                 <div class="car-specs">
@@ -96,11 +128,14 @@ window.onload = function() {
                     })}
                 </p>
             `;
+
             carCard.appendChild(infoDiv);
+
+
             const detalhesButton = document.createElement('button');
             detalhesButton.classList.add('details-button');
             detalhesButton.textContent = 'Mais Detalhes';
-            detalhesButton.onclick = function() {
+            detalhesButton.onclick = function () {
                 const detalhesCompletos = `
                     Nome: ${car.nome}
                     Marca: ${car.marca}
@@ -116,30 +151,40 @@ window.onload = function() {
                         style: 'currency', 
                         currency: 'BRL' 
                     })}
+                    
                     Detalhes Adicionais:
                     ${car.detalhes}
                 `;
                 alert(detalhesCompletos);
             };
             carCard.appendChild(detalhesButton);
+
             carsList.appendChild(carCard);
         });
     }
 };
-document.addEventListener('DOMContentLoaded', function() {
+
+
+document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const body = document.body;
+
+
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     body.appendChild(overlay);
+
     function toggleMenu() {
         menuToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
         overlay.classList.toggle('active');
         body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
     }
+
     menuToggle.addEventListener('click', toggleMenu);
+
+
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -148,21 +193,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+
     overlay.addEventListener('click', () => {
         if (navMenu.classList.contains('active')) {
             toggleMenu();
         }
     });
-    document.addEventListener('keydown', function(e) {
+
+
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             toggleMenu();
         }
     });
 });
-window.addEventListener('orientationchange', function() {
+
+
+window.addEventListener('orientationchange', function () {
     const navLinks = document.querySelector('.nav-links');
     const menuToggle = document.querySelector('.menu-toggle');
     const overlay = document.querySelector('.overlay');
+
     if (navLinks.classList.contains('open')) {
         navLinks.classList.remove('open');
         menuToggle.classList.remove('active');
@@ -170,9 +222,11 @@ window.addEventListener('orientationchange', function() {
         document.body.style.overflow = '';
     }
 });
+
+
 const mobileInputs = document.querySelectorAll('input[type="text"], input[type="number"], select, textarea');
 mobileInputs.forEach(input => {
-    input.addEventListener('focus', function() {
+    input.addEventListener('focus', function () {
         if (window.innerWidth <= 768) {
             input.setAttribute('readonly', true);
             input.removeAttribute('readonly');

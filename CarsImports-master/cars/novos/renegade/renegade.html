@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cars Imports</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="favicon.png">
-     <!-- Font Awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-     <!-- AOS Animations -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="navbar">
         <div class="nav-container">
             <a href="../../../index.html" class="logo">
                 <img src="../../../logo.png" alt="Logo" class="logo-img">
             </a>
+
             <button class="hamburger" aria-label="Menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
+
             <nav class="nav-menu">
                 <ul class="nav-links">
                     <li><a href="../../../inicio.html"><i class="fas fa-home"></i> Início</a></li>
-                    <li><a href="../../../cars/luxos/luxury-cars.html"><i class="fas fa-crown"></i> Carros de Luxo</a></li>
+                    <li><a href="../../../cars/luxos/luxury-cars.html"><i class="fas fa-crown"></i> Carros de Luxo</a>
+                    </li>
                     <li><a href="../../../cars/usados/used-cars.html"><i class="fas fa-car"></i> Carros Usados</a></li>
-                    <li><a href="../../../cars/novos/new-cars.html"><i class="fas fa-car-side"></i> Carros Novos</a></li>
+                    <li><a href="../../../cars/novos/new-cars.html"><i class="fas fa-car-side"></i> Carros Novos</a>
+                    </li>
                     <li><a href="../../../cars/add-car/index.html"><i class="fas fa-plus-circle"></i> Adicionar</a></li>
-                    <li><a href="https://api.whatsapp.com/send/?phone=5511986981750"><i class="fab fa-whatsapp"></i> Contato</a></li>
+                    <li><a href="https://api.whatsapp.com/send/?phone=5511986981750"><i class="fab fa-whatsapp"></i>
+                            Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-</header>
-<br>
-<br>
-<br>
+    </header>
+    <br>
+    <br>
+    <br>
+
     <!-- Car Showcase Section -->
     <section class="car-showcase">
         <div class="car-images">
@@ -59,7 +68,9 @@
             <h1>Jeep Renegade - Ano 2023</h1>
             <h2>Preço: R$ 150.000,00</h2>
             <p class="info">Localização: Brasília, DF</p>
-            <p class="highlights">Veículo zero quilômetro, pronto para ser registrado e transferido para o primeiro proprietário. Documentação completa e garantia de fábrica de 3 anos.</p>
+            <p class="highlights">Veículo zero quilômetro, pronto para ser registrado e transferido para o primeiro
+                proprietário. Documentação completa e garantia de fábrica de 3 anos.</p>
+
             <div class="cta-buttons">
                 <div class="cta-buttons">
                     <a href="./pagamento/pagamento.html" class="buy-now"> Compre Agora</a>
@@ -68,11 +79,15 @@
                     <a href="./financiamento/financing.html?value=150000" class="finance-button"> Financiar Carro</a>
                 </div>
             </div>
+
             <p class="description">
-                Apresentamos o Jeep Renegade, um SUV compacto que combina estilo robusto, versatilidade e tecnologia avançada. Com uma excelente performance tanto em ambientes urbanos quanto em off-road, o Renegade é ideal para quem busca aventura e conforto em um só veículo.
+                Apresentamos o Jeep Renegade, um SUV compacto que combina estilo robusto, versatilidade e tecnologia
+                avançada. Com uma excelente performance tanto em ambientes urbanos quanto em off-road, o Renegade é
+                ideal para quem busca aventura e conforto em um só veículo.
             </p>
         </div>
     </section>
+
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
         <span class="close" onclick="closeLightbox()">&times;</span>
@@ -81,6 +96,7 @@
         <img class="lightbox-content" id="lightbox-image">
         <span class="next" onclick="changeImage(1)">&#10095;</span>
     </div>
+
     <!-- Car Specifications -->
     <section class="specifications">
         <h3>Detalhes do veículo</h3>
@@ -97,6 +113,7 @@
             <li><strong>Assentos:</strong> 5</li>
         </ul>
     </section>
+
     <!-- Equipment Section -->
     <section class="equipment">
         <h3>Equipamentos e Acessórios</h3>
@@ -113,6 +130,7 @@
             <li>Bancos em tecido com ajuste manual</li>
         </ul>
     </section>
+
     <!-- Contact Section -->
     <section class="contact">
         <h3>Entre em Contato</h3>
@@ -121,6 +139,8 @@
             <a href="vendedor.html" class="contact-button">Falar com o Vendedor</a>
         </div>
     </section>
+
     <script src="script.js"></script>
 </body>
+
 </html>

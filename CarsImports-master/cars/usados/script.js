@@ -1,18 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+
     const filters = {
         price: document.getElementById('price'),
         color: document.getElementById('color'),
         brand: document.getElementById('brand'),
         cate: document.getElementById('cate')
     };
+
+
     const cards = document.querySelectorAll('.card');
+
+
     function filterCars() {
         let visibleCount = 0;
+
         cards.forEach(card => {
             let shouldShow = true;
+
+
             if (filters.price.value !== 'todas') {
                 const cardPrice = parseInt(card.getAttribute('data-price'));
-                switch(filters.price.value) {
+                switch (filters.price.value) {
                     case 'ate-100000':
                         shouldShow = cardPrice <= 100000;
                         break;
@@ -24,15 +32,23 @@ document.addEventListener('DOMContentLoaded', function() {
                         break;
                 }
             }
+
+
             if (shouldShow && filters.color.value !== 'todas') {
                 shouldShow = card.getAttribute('data-color') === filters.color.value;
             }
+
+
             if (shouldShow && filters.brand.value !== 'todas') {
                 shouldShow = card.getAttribute('data-brand') === filters.brand.value;
             }
+
+
             if (shouldShow && filters.cate.value !== 'todas') {
                 shouldShow = card.getAttribute('data-cate').toLowerCase() === filters.cate.value.toLowerCase();
             }
+
+
             if (shouldShow) {
                 card.style.display = '';
                 card.style.width = '';
@@ -48,22 +64,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.style.transform = 'translateX(-20px)';
             }
         });
+
         handleNoResults(visibleCount);
     }
+
+
     function resetFilters() {
         Object.values(filters).forEach(filter => {
             filter.value = 'todas';
         });
+
         cards.forEach(card => {
             card.style.display = '';
         });
+
         const noResultsMessage = document.querySelector('.no-results');
         if (noResultsMessage) {
             noResultsMessage.style.display = 'none';
         }
     }
+
+
     function handleNoResults(visibleCount) {
         let noResultsMessage = document.querySelector('.no-results');
+
         if (!noResultsMessage) {
             noResultsMessage = document.createElement('div');
             noResultsMessage.className = 'no-results';
@@ -73,41 +97,58 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             document.querySelector('.card-row').after(noResultsMessage);
         }
+
         noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
     }
+
+
     Object.values(filters).forEach(filter => {
         if (filter) {
             filter.addEventListener('change', filterCars);
         }
     });
+
+
     const resetButton = document.querySelector('.reset-filter-btn');
     if (resetButton) {
         resetButton.addEventListener('click', resetFilters);
     }
+
+
     const applyButton = document.querySelector('.filter-btn.primary');
     if (applyButton) {
         applyButton.addEventListener('click', filterCars);
     }
+
+
     const mobileFilterBtn = document.querySelector('.mobile-filter-btn');
     const filtersSection = document.querySelector('.filters-section');
     const closeFiltersBtn = document.querySelector('.close-filters-btn');
     const filterOverlay = document.querySelector('.filter-overlay');
+
+
     function openFilters() {
         filtersSection.classList.add('active');
         filterOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
+
+
     function closeFilters() {
         filtersSection.classList.remove('active');
         filterOverlay.classList.remove('active');
         document.body.style.overflow = '';
     }
+
+
     if (mobileFilterBtn) {
         mobileFilterBtn.addEventListener('click', openFilters);
     }
+
     if (closeFiltersBtn) {
         closeFiltersBtn.addEventListener('click', closeFilters);
     }
+
     if (filterOverlay) {
         filterOverlay.addEventListener('click', closeFilters);
     }

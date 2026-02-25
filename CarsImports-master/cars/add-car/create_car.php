@@ -1,8 +1,13 @@
 <?php
+
 $carDirectory = 'cars/'; 
+
+
 if (!is_dir($carDirectory)) {
     mkdir($carDirectory, 0755, true);
 }
+
+
 $nome = htmlspecialchars($_POST['nome']);
 $marca = htmlspecialchars($_POST['marca']);
 $modelo = htmlspecialchars($_POST['modelo']);
@@ -16,8 +21,12 @@ $assentos = htmlspecialchars($_POST['assentos']);
 $estado = htmlspecialchars($_POST['estado']);
 $equipamentos = htmlspecialchars($_POST['equipamentos']);
 $valor = htmlspecialchars($_POST['valor']);
+
+
 $imagens = $_FILES['imagem'];
 $imagemPaths = [];
+
+
 for ($i = 0; $i < count($imagens['name']); $i++) {
     $targetFile = $carDirectory . basename($imagens['name'][$i]);
     if (move_uploaded_file($imagens['tmp_name'][$i], $targetFile)) {
@@ -26,8 +35,12 @@ for ($i = 0; $i < count($imagens['name']); $i++) {
         echo "Desculpe, ocorreu um erro ao fazer o upload da imagem: " . htmlspecialchars($imagens['name'][$i]);
     }
 }
+
+
 $carFileName = strtolower(str_replace(' ', '-', $marca . '-' . $modelo . '.html'));
 $carFilePath = $carDirectory . $carFileName;
+
+
 $htmlContent = "
 <!DOCTYPE html>
 <html lang='pt-BR'>
@@ -57,14 +70,18 @@ $htmlContent = "
         <p><strong>Valor:</strong> R$ $valor</p>
         <h2>Imagens:</h2>
         <div class='image-gallery'>";
+        
 foreach ($imagemPaths as $path) {
     $htmlContent .= "<img src='$path' alt='Imagem do $modelo' style='width: 200px; height: auto;'>";
 }
+
 $htmlContent .= "
         </div>
     </section>
 </body>
 </html>";
+
+
 if (file_put_contents($carFilePath, $htmlContent) !== false) {
     echo "Carro adicionado com sucesso! <a href='$carFilePath'>Ver página do carro</a>";
 } else {

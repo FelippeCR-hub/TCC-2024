@@ -14,25 +14,28 @@
             height: 100vh;
             margin: 0;
         }
+
         .chat-container {
             width: 400px;
             max-width: 100%;
-            background-color:
+            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             overflow: hidden;
         }
+
         .chat-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color:
+            background-color: #007bff;
             padding: 10px;
             color: white;
             font-size: 20px;
         }
+
         h1 {
             font-family: 'Orbitron', sans-serif; 
             text-align: center;
@@ -40,65 +43,77 @@
             margin: 0;
             flex-grow: 1;
         }
+
         .back-arrow {
             cursor: pointer;
             font-size: 24px;
         }
+
         .chat-messages {
             padding: 10px;
             flex-grow: 1;
             overflow-y: auto;
             height: 300px;
-            border-bottom: 1px solid
+            border-bottom: 1px solid #ddd;
         }
+
         .chat-message {
             margin-bottom: 10px;
         }
+
         .message-sent {
             text-align: right;
         }
+
         .message-received {
             text-align: left;
         }
+
         .message {
             display: inline-block;
             padding: 10px;
             border-radius: 20px;
             margin-bottom: 5px;
         }
+
         .message-sent .message {
-            background-color:
+            background-color: #007bff;
             color: white;
         }
+
         .message-received .message {
-            background-color:
-            color:
+            background-color: #e9e9eb;
+            color: #333;
         }
+
         .chat-options {
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
             padding: 10px;
-            border-top: 1px solid
+            border-top: 1px solid #ddd;
         }
+
         .chat-options button {
             flex: 1 1 calc(50% - 5px);
-            background-color:
+            background-color: #007bff;
             color: white;
             border: none;
-            padding: 8px; 
-            font-size: 14px;
+            padding: 8px; /* Tamanho do botão reduzido */
+            font-size: 14px; /* Fonte reduzida */
             border-radius: 15px;
             cursor: pointer;
         }
+
         .chat-options button:hover {
-            background-color:
+            background-color: #0056b3;
         }
     </style>
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="chat-container">
         <div class="chat-header">
             <span class="back-arrow" onclick="window.location.href = '1500.html';">&larr;</span>
@@ -114,6 +129,7 @@
             <button onclick="selectOption('O veículo está disponível para financiamento?')">Disponível para financiamento?</button>
         </div>
     </div>
+
     <script>
         function addMessage(content, type) {
             const messageElement = document.createElement('div');
@@ -122,8 +138,10 @@
             document.getElementById('chat-messages').appendChild(messageElement);
             document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
         }
+
         function selectOption(userMessage) {
             addMessage(userMessage, 'message-sent');
+            
             let response;
             switch (userMessage) {
                 case 'Qual é o valor do veículo?':
@@ -142,8 +160,10 @@
                     response = "Desculpe, não entendi sua pergunta.";
                     break;
             }
+
             setTimeout(() => addMessage(response, 'message-received'), 500);
         }
     </script>
+
 </body>
 </html>

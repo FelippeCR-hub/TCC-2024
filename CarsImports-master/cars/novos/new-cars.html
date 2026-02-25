@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
+
     <header class="navbar">
         <div class="container">
             <a href="/" class="logo">
                 <img src="../../logo.png" alt="Cars Imports" class="logo-img">
             </a>
+
             <nav class="nav-menu">
                 <a href="../../inicio.html" class="nav-link">
                     <i class="fas fa-home"></i> Início
@@ -36,11 +40,13 @@
                 </a>
                 <a href="login.php" class="nav-link login-btn">Login</a>
             </nav>
+
             <button class="nav-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
             <button class="hamburger">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -48,6 +54,7 @@
             </button>
         </div>
     </header>
+
     <!-- Seção de Filtros -->
     <section class="filters-section">
         <div class="filters-mobile-header">
@@ -56,12 +63,14 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
+
         <div class="filters-wrapper">
             <div class="filters-controls">
                 <div class="filters-title">
                     <i class="fas fa-car-alt"></i>
                     <h2>Encontre seu Carro Novo</h2>
                 </div>
+
                 <div class="filters-buttons">
                     <button class="filter-btn primary">
                         <i class="fas fa-filter"></i>
@@ -73,6 +82,7 @@
                     </button>
                 </div>
             </div>
+
             <!-- Container de Filtros -->
             <div class="filters-container">
                 <!-- Filtro de Preço -->
@@ -88,6 +98,7 @@
                         <option value="acima-150000">Acima de R$ 150.000</option>
                     </select>
                 </div>
+
                 <!-- Filtro de Cor -->
                 <div class="filter-item">
                     <div class="filter-header">
@@ -103,6 +114,7 @@
                         <option value="vermelho">Vermelho</option>
                     </select>
                 </div>
+
                 <!-- Filtro de Marca -->
                 <div class="filter-item">
                     <div class="filter-header">
@@ -118,6 +130,7 @@
                         <option value="jeep">Jeep</option>
                     </select>
                 </div>
+
                 <!-- Filtro de Categoria -->
                 <div class="filter-item">
                     <div class="filter-header">
@@ -138,6 +151,7 @@
             </div>
         </div>
     </section>
+
     <!-- Cards dos Carros -->
     <main class="cars-container">
         <div class="container">
@@ -157,6 +171,7 @@
                         <a href="./gol/gol.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 2 - Corolla -->
                 <div class="card" data-price="130000" data-color="cinza" data-brand="toyota" data-cate="seda">
                     <img src="./corolla/frente.jpg" alt="Corolla">
@@ -172,6 +187,7 @@
                         <a href="./corolla/corolla.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 3 - Renegade -->
                 <div class="card" data-price="150000" data-color="vermelho" data-brand="jeep" data-cate="SUV">
                     <img src="./renegade/frente.jpg" alt="Renegade">
@@ -187,6 +203,7 @@
                         <a href="./renegade/renegade.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 4 - S10 -->
                 <div class="card" data-price="180000" data-color="branco" data-brand="chevrolet" data-cate="picape">
                     <img src="./s10/frente.jpg" alt="S10">
@@ -202,6 +219,7 @@
                         <a href="./s10/s10.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 5 - Nivus -->
                 <div class="card" data-price="120000" data-color="azul" data-brand="volkswagen" data-cate="crossover">
                     <img src="./nivus/frente.jpg" alt="Nivus">
@@ -217,6 +235,7 @@
                         <a href="./nivus/nivus.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 6 - Fox -->
                 <div class="card" data-price="60000" data-color="branco" data-brand="volkswagen" data-cate="hatch">
                     <img src="./fox/frente.jpg" alt="Fox">
@@ -232,6 +251,7 @@
                         <a href="./fox/fox.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 7 - Kwid -->
                 <div class="card" data-price="65000" data-color="azul" data-brand="renault" data-cate="compacto">
                     <img src="./kwid/frente.jpg" alt="Kwid">
@@ -247,6 +267,7 @@
                         <a href="./kwid/kwid.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 8 - Cronos -->
                 <div class="card" data-price="90000" data-color="preto" data-brand="fiat" data-cate="seda-compacto">
                     <img src="./cronos/frente.jpg" alt="Cronos">
@@ -265,7 +286,9 @@
             </div>
         </div>
     </main>
+
     <script src="script.js"></script>
     <script src="menu.js"></script>
 </body>
+
 </html>

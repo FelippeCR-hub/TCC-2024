@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="navbar">
@@ -16,6 +18,7 @@
             <a href="/" class="logo">
                 <img src="../../logo.png" alt="Cars Imports" class="logo-img">
             </a>
+
             <nav class="nav-menu">
                 <a href="../../inicio.html" class="nav-link">
                     <i class="fas fa-home"></i> Início
@@ -37,11 +40,13 @@
                 </a>
                 <a href="login.php" class="nav-link login-btn">Login</a>
             </nav>
+
             <button class="nav-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
             <button class="hamburger">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -49,6 +54,7 @@
             </button>
         </div>
     </header>
+
     <!-- Seção de Filtros -->
     <section class="filters-section">
         <div class="filters-mobile-header">
@@ -57,12 +63,14 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
+
         <div class="filters-wrapper">
             <div class="filters-controls">
                 <div class="filters-title">
                     <i class="fas fa-car-alt"></i>
                     <h2>Encontre seu Carro Usado</h2>
                 </div>
+
                 <div class="filters-buttons">
                     <button class="filter-btn primary">
                         <i class="fas fa-filter"></i>
@@ -74,6 +82,7 @@
                     </button>
                 </div>
             </div>
+
             <div class="filters-container">
                 <!-- Filtro de Preço -->
                 <div class="filter-item">
@@ -88,6 +97,7 @@
                         <option value="acima-160000">Acima de R$ 160.000</option>
                     </select>
                 </div>
+
                 <!-- Filtro de Cor -->
                 <div class="filter-item">
                     <div class="filter-header">
@@ -103,6 +113,7 @@
                         <option value="vermelho">Vermelho</option>
                     </select>
                 </div>
+
                 <!-- Filtro de Marca -->
                 <div class="filter-item">
                     <div class="filter-header">
@@ -121,6 +132,7 @@
                         <option value="fiat">Fiat</option>
                     </select>
                 </div>
+
                 <!-- Filtro de Categoria -->
                 <div class="filter-item">
                     <div class="filter-header">
@@ -139,6 +151,7 @@
             </div>
         </div>
     </section>
+
     <!-- Container Principal dos Cards -->
     <main class="cars-container">
         <div class="container">
@@ -158,6 +171,7 @@
                         <a href="bmw3/bmw3.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 2 - Hyundai Creta -->
                 <div class="card" data-price="95000" data-color="azul" data-brand="hyundai" data-cate="SUV">
                     <img src="creta/frente.jpg" alt="Hyundai Creta">
@@ -173,6 +187,7 @@
                         <a href="creta/creta.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 3 - Honda HR-V -->
                 <div class="card" data-price="105000" data-color="cinza" data-brand="honda" data-cate="SUV">
                     <img src="hrv/frente.jpg" alt="Honda HR-V">
@@ -188,6 +203,7 @@
                         <a href="hrv/hrv.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 4 - Toyota Onix -->
                 <div class="card" data-price="75000" data-color="cinza" data-brand="chevrolet" data-cate="hatch">
                     <img src="onix/frente.jpg" alt="Chevrolet Onix">
@@ -203,6 +219,7 @@
                         <a href="onix/onix.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 5 - Subaru Outback -->
                 <div class="card" data-price="180000" data-color="branco" data-brand="subaru" data-cate="SUV">
                     <img src="outback/frente.jpg" alt="Subaru Outback">
@@ -218,6 +235,7 @@
                         <a href="outback/outback.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 6 - Ford Ranger -->
                 <div class="card" data-price="150000" data-color="preto" data-brand="ford" data-cate="picape">
                     <img src="ranger/frente.jpg" alt="Ford Ranger">
@@ -233,6 +251,7 @@
                         <a href="ranger/ranger.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 7 - Toyota Rave4 -->
                 <div class="card" data-price="160000" data-color="vermelho" data-brand="toyota" data-cate="SUV">
                     <img src="rave/frente.jpg" alt="Toyota RAV4">
@@ -248,6 +267,7 @@
                         <a href="rave/rave.html" class="service-button">Mais Detalhes</a>
                     </div>
                 </div>
+
                 <!-- Card 8 - Fiat Spin -->
                 <div class="card" data-price="85000" data-color="preto" data-brand="chevrolet" data-cate="minivan">
                     <img src="spin/frente.jpg" alt="Fiat Spin">
@@ -266,12 +286,16 @@
             </div>
         </div>
     </main>
+
     <!-- Elementos Mobile -->
     <button class="mobile-filter-btn">
         <i class="fas fa-filter"></i>
     </button>
+
     <div class="filter-overlay"></div>
+
     <script src="script.js"></script>
     <script src="menu.js"></script>
 </body>
+
 </html>

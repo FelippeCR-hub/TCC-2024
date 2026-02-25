@@ -1,29 +1,41 @@
 function showPaymentForm(type) {
     document.querySelector('.form-container').style.display = 'none';
     document.querySelector('.boleto-container').style.display = 'none';
+    
     if (type === 'cartao') {
         document.querySelector('.form-container').style.display = 'block';
     } else if (type === 'boleto') {
         document.querySelector('.boleto-container').style.display = 'block';
     }
 }
+
 function generateBoleto() {
     const boletoContainer = document.querySelector('.boleto-details');
-    const valorOriginal = 280000.00; 
-    const percentualJuros = 5; 
-    const meses = 12; 
+    
+    // Valores fictícios
+    const valorOriginal = 280000.00; // Valor original do carro
+    const percentualJuros = 5; // Juros em percentual
+    const meses = 12; // Quantidade de parcelas
+
+    // Cálculo do valor total e valor das prestações
     const valorTotal = valorOriginal + (valorOriginal * percentualJuros / 100);
     const valorPrestacao = valorTotal / meses;
+
+    // Formatando para o estilo monetário brasileiro
     const valorOriginalFormatted = valorOriginal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     const valorTotalFormatted = valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     const valorPrestacaoFormatted = valorPrestacao.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    const codigoBarras = "1234 5678 9101 1121 3141 5161 7181"; 
+    
+    const codigoBarras = "1234 5678 9101 1121 3141 5161 7181"; // Código de barras falso.
+
+    // Dados fictícios para o boleto
     const dataVencimento = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString('pt-BR');
     const beneficiario = "Cars Imports";
     const cedente = "Banco do Brasil";
     const pagador = "João da Silva";
     const cpfPagador = "123.456.789-00";
-    const nossoNumero = "11 986981750"; 
+    const nossoNumero = "11 986981750"; // Nosso número do boleto.
+
     boletoContainer.innerHTML = `
         <div class="boleto">
             <div class="boleto-header">
@@ -50,14 +62,19 @@ function generateBoleto() {
         </div>
     `;
 }
+
+// Função para copiar o código de barras para a área de transferência
 function copyCodigoBarras() {
     const codigoBarrasElement = document.getElementById("codigoBarras");
     const codigoBarras = codigoBarrasElement.innerText;
+
+    // Cria um elemento temporário para copiar o texto
     const tempInput = document.createElement("input");
     tempInput.value = codigoBarras;
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand("copy");
     document.body.removeChild(tempInput);
+
     alert("Código de barras copiado para a área de transferência!");
 }

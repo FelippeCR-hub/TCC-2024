@@ -1,4 +1,4 @@
-
+/* Reset e Variáveis */
 :root {
     --primary: #ff3838;
     --secondary: #2c3e50;
@@ -31,7 +31,7 @@ body {
     padding: 0 20px;
 }
 
-
+/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -95,7 +95,7 @@ body {
     color: var(--primary);
 }
 
-
+/* Estilo especial para o botão de login */
 .login-btn {
     background: var(--primary);
     padding: 0.5rem 1.5rem;
@@ -108,7 +108,7 @@ body {
     color: var(--text-light);
 }
 
-
+/* Ícones específicos */
 .nav-link .fa-crown {
     color: #ffd700;
 }
@@ -117,7 +117,7 @@ body {
     color: #25D366;
 }
 
-
+/* Menu mobile */
 .nav-toggle {
     display: none;
     background: none;
@@ -168,7 +168,7 @@ body {
     }
 }
 
-
+/* Hero Section */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -191,7 +191,7 @@ body {
     z-index: 1;
 }
 
-
+/* Sobreposição escura */
 .hero-background::after {
     content: '';
     position: absolute;
@@ -199,11 +199,9 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.6)
-    );
+    background: linear-gradient(45deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.6));
 }
 
 .hero .container {
@@ -241,7 +239,7 @@ body {
     justify-content: center;
 }
 
-
+/* Responsividade */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 3rem;
@@ -257,7 +255,7 @@ body {
     }
 }
 
-
+/* Botões */
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
@@ -290,13 +288,13 @@ body {
     transform: translateY(-3px);
 }
 
-
+/* Seção Carros */
 .cars-section {
     padding: 6rem 0;
     background: var(--dark);
 }
 
-
+/* Grid de carros */
 .cars-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -306,7 +304,7 @@ body {
     margin: 0 auto;
 }
 
-
+/* Responsividade do grid */
 @media (max-width: 1200px) {
     .cars-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -317,7 +315,7 @@ body {
     .cars-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .car-card {
         height: auto;
         min-height: 480px;
@@ -342,7 +340,7 @@ body {
     opacity: 0.8;
 }
 
-
+/* Card do Carro */
 .car-card {
     background: #1a1a1a;
     border-radius: 20px;
@@ -364,7 +362,7 @@ body {
     transform: scale(1.00);
 }
 
-
+/* Container da Imagem */
 .car-image-container {
     width: 100%;
     height: 250px;
@@ -378,7 +376,7 @@ body {
     object-fit: cover;
 }
 
-
+/* Conteúdo do Card */
 .car-content {
     padding: 15px;
     display: flex;
@@ -387,12 +385,12 @@ body {
     justify-content: space-between;
 }
 
-
+/* Informações do Carro */
 .car-info {
     flex: 1;
 }
 
-
+/* Nome do Carro */
 .car-name {
     font-family: 'Orbitron', sans-serif;
     font-size: 22px;
@@ -400,7 +398,7 @@ body {
     margin-bottom: 10px;
 }
 
-
+/* Tag de Categoria */
 .car-tag {
     position: absolute;
     top: 12px;
@@ -414,7 +412,7 @@ body {
     z-index: 2;
 }
 
-
+/* Especificações */
 .car-specs {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -435,7 +433,7 @@ body {
     color: #ff3838;
 }
 
-
+/* Preço */
 .car-price {
     font-family: 'Orbitron', sans-serif;
     font-size: 26px;
@@ -443,14 +441,12 @@ body {
     margin: 10px 0;
 }
 
-
+/* Botão */
 .btn-details {
     width: 100%;
-    background: linear-gradient(
-        45deg,
-        #ff3838,
-        #ff2424
-    );
+    background: linear-gradient(45deg,
+            #ff3838,
+            #ff2424);
     text-decoration: none;
     text-align: center;
     color: #ffffff;
@@ -468,7 +464,7 @@ body {
     transition: all 0.3s ease;
 }
 
-
+/* Efeito de brilho deslizante no hover */
 .btn-details::before {
     content: '';
     position: absolute;
@@ -476,16 +472,14 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
     transition: 0.5s;
 }
 
-
+/* Animação do hover */
 .btn-details:hover::before {
     left: 100%;
 }
@@ -495,7 +489,7 @@ body {
     box-shadow: 0 5px 15px rgba(255, 56, 56, 0.3);
 }
 
-
+/* Remove gradientes de outros elementos */
 .car-card {
     background: #1a1a1a;
 }
@@ -504,7 +498,7 @@ body {
     background: #ff3838;
 }
 
-
+/* Hover Effects */
 .btn-details:hover {
     background: #ff2424;
     transform: translateY(-2px);
@@ -517,12 +511,10 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
     transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -531,7 +523,7 @@ body {
     transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
+/* Estilização das setas do Swiper */
 .swiper-button-next,
 .swiper-button-prev {
     display: none;
@@ -545,19 +537,17 @@ body {
     width: 20px;
     border-radius: 5px;
     opacity: 1;
-    background: linear-gradient(
-        45deg,
-        var(--primary) 0%,
-        #ff2424 100%
-    );
+    background: linear-gradient(45deg,
+            var(--primary) 0%,
+            #ff2424 100%);
 }
 
-
+/* Responsividade */
 @media (max-width: 1400px) {
     .cars-section .container {
         padding: 0 60px;
     }
-    
+
     .swiper-button-next,
     .swiper-button-prev {
         width: 45px;
@@ -588,9 +578,11 @@ body {
 }
 
 @media (max-width: 768px) {
+
     .swiper-button-next,
     .swiper-button-prev {
         display: none;
+        /* Oculta as setas em telas muito pequenas */
     }
 }
 
@@ -652,7 +644,7 @@ body {
     }
 }
 
-
+/* Footer */
 .footer {
     background: var(--darker);
     padding: 4rem 0 2rem;
@@ -703,6 +695,7 @@ body {
 
 .whatsapp-link:hover {
     color: #25D366;
+    /* Cor oficial do WhatsApp */
     transform: translateY(-3px);
 }
 
@@ -712,7 +705,7 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
+/* Responsividade */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
@@ -758,7 +751,7 @@ body {
     }
 }
 
-
+/* Estilo específico para o botão de chat */
 .btn-chat {
     display: inline-flex;
     align-items: center;
@@ -779,7 +772,7 @@ body {
     font-size: 1.2rem;
 }
 
-
+/* Estilo adicional para o link do WhatsApp na navbar */
 .nav-link i.fab.fa-whatsapp {
     font-size: 1.2rem;
     margin-right: 0.3rem;
@@ -789,7 +782,7 @@ body {
     color: #25D366;
 }
 
-
+/* Estilos adicionais para os ícones na navbar */
 .nav-link i {
     margin-right: 0.5rem;
 }
@@ -809,7 +802,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-
+/* Ajuste do espaçamento para acomodar mais itens */
 .nav-menu {
     gap: 1.5rem;
 }
@@ -818,7 +811,7 @@ body {
     .nav-menu {
         gap: 1rem;
     }
-    
+
     .nav-link {
         font-size: 0.85rem;
         padding: 0.5rem 0.8rem;
@@ -857,7 +850,7 @@ body {
     }
 }
 
-
+/* Estilos da Seção de Serviços */
 .services-section {
     padding: 80px 0;
     background: #000000;
@@ -870,7 +863,7 @@ body {
 
 .section-header h2 {
     font-size: 48px;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     font-family: 'Orbitron', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -885,7 +878,7 @@ body {
     overflow: hidden;
 }
 
-
+/* Efeito de brilho deslizante */
 .section-line::after {
     content: '';
     position: absolute;
@@ -893,16 +886,14 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.8),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent);
     animation: slidingGlow 2s infinite;
 }
 
-
+/* Efeito de pulsar */
 .section-line::before {
     content: '';
     position: absolute;
@@ -914,30 +905,33 @@ body {
     animation: pulseLine 2s infinite;
 }
 
-
+/* Animação do brilho deslizante */
 @keyframes slidingGlow {
     0% {
         left: -100%;
     }
+
     100% {
         left: 100%;
     }
 }
 
-
+/* Animação de pulsar */
 @keyframes pulseLine {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
     }
 }
 
-
+/* Grid de Serviços */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -947,7 +941,7 @@ body {
     padding: 0 20px;
 }
 
-
+/* Card de Serviço com gradiente e borda */
 .service-card {
     background: #111111;
     border-radius: 20px;
@@ -964,7 +958,7 @@ body {
     justify-content: space-between;
 }
 
-
+/* Efeito gradiente que segue o mouse */
 .service-card::before {
     content: '';
     position: absolute;
@@ -972,11 +966,9 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-        circle at var(--mouse-x) var(--mouse-y),
-        rgba(255, 56, 56, 0.15),
-        transparent 40%
-    );
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 56, 56, 0.15),
+            transparent 40%);
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
@@ -987,20 +979,20 @@ body {
     opacity: 1;
 }
 
-
-.service-card > * {
+/* Conteúdo do card acima do gradiente */
+.service-card>* {
     position: relative;
     z-index: 2;
 }
 
-
+/* Efeito hover no card */
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(255, 56, 56, 0.15);
     border-color: rgba(255, 56, 56, 0.3);
 }
 
-
+/* Gradiente da borda no hover */
 .service-card::before {
     content: '';
     position: absolute;
@@ -1008,13 +1000,12 @@ body {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(
-        45deg,
-        var(--primary) 0%,
-        #ff2424 50%,
-        var(--primary) 100%
-    );
+    background: linear-gradient(45deg,
+            var(--primary) 0%,
+            #ff2424 50%,
+            var(--primary) 100%);
     border-radius: 22px;
+    /* Ligeiramente maior que o card */
     z-index: -1;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -1024,7 +1015,7 @@ body {
     opacity: 1;
 }
 
-
+/* Efeito de brilho */
 .service-card::after {
     content: '';
     position: absolute;
@@ -1032,12 +1023,10 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
     transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1045,7 +1034,7 @@ body {
     left: 100%;
 }
 
-
+/* Resto do CSS mantido igual... */
 .service-icon {
     width: 80px;
     height: 80px;
@@ -1073,7 +1062,7 @@ body {
     transform: scale(1.1);
 }
 
-
+/* Título e texto */
 .service-card h3 {
     font-size: 22px;
     color: #FFFFFF;
@@ -1090,7 +1079,7 @@ body {
     min-height: 80px;
 }
 
-
+/* Link com efeito */
 .service-link {
     display: inline-flex;
     align-items: center;
@@ -1118,20 +1107,21 @@ body {
     color: #000000;
 }
 
-
+/* Responsividade */
 @media (max-width: 1200px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+        /* 2 cards por linha em telas médias */
     }
-    
+
     .service-card {
         padding: 30px;
     }
-    
+
     .service-card h3 {
         font-size: 24px;
     }
-    
+
     .service-card p {
         font-size: 15px;
     }
@@ -1140,28 +1130,30 @@ body {
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
+        /* 1 card por linha em telas pequenas */
     }
-    
+
     .service-card {
         padding: 40px;
     }
-    
+
     .service-card h3 {
         font-size: 26px;
     }
-    
+
     .service-card p {
         font-size: 16px;
         min-height: auto;
     }
 }
 
-
+/* Animação de Entrada */
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1172,10 +1164,11 @@ body {
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
-
+/* Seção Quem Somos */
 .about-section {
     padding: 80px 0;
     overflow: hidden;
+    /* Previne overflow das animações */
 }
 
 .about-grid {
@@ -1197,7 +1190,7 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
+/* Efeito hover com borda brilhante */
 .about-card::before {
     content: '';
     position: absolute;
@@ -1222,7 +1215,7 @@ body {
     opacity: 1;
 }
 
-
+/* Animação do ícone */
 .about-icon {
     font-size: 2.5rem;
     color: #ff3333;
@@ -1253,12 +1246,13 @@ body {
     animation-delay: 0.5s;
 }
 
-
+/* Keyframes para as animações */
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1269,9 +1263,11 @@ body {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -1281,15 +1277,17 @@ body {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
-
+/* Efeito de brilho no hover */
 .about-card::after {
     content: '';
     position: absolute;
@@ -1297,12 +1295,10 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
     transition: 0.5s;
 }
 
@@ -1310,23 +1306,24 @@ body {
     left: 100%;
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
     .about-grid {
         grid-template-columns: 1fr;
         padding: 0 20px;
     }
-    
+
     .about-card {
         padding: 20px;
     }
-    
+
     .about-card:hover {
         transform: translateY(-5px);
+        /* Reduz a elevação em telas menores */
     }
 }
 
-
+/* Animação para cards individuais com delay */
 .about-card:nth-child(1) {
     animation-delay: 0.2s;
 }
@@ -1339,7 +1336,7 @@ body {
     animation-delay: 0.6s;
 }
 
-
+/* Efeito de destaque no texto */
 .about-card h3::after {
     content: '';
     position: absolute;
@@ -1356,7 +1353,7 @@ body {
     width: 50px;
 }
 
-
+/* Responsividade Global */
 @media (max-width: 1200px) {
     .card-row {
         flex-wrap: wrap;
@@ -1490,7 +1487,7 @@ body {
     }
 }
 
-
+/* Menu Hamburger */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -1508,7 +1505,7 @@ body {
     transition: all 0.3s ease;
 }
 
-
+/* Animação do Menu Hamburger */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -1521,7 +1518,7 @@ body {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-
+/* Ajustes para telas muito pequenas */
 @media (max-width: 320px) {
     .navbar {
         padding: 0.3rem;
@@ -1549,7 +1546,7 @@ body {
     }
 }
 
-
+/* Ajustes para telas grandes */
 @media (min-width: 1400px) {
     .container {
         max-width: 1320px;

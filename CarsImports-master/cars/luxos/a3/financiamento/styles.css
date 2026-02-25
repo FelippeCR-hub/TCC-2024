@@ -4,51 +4,62 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color:
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    color:
+    color: #333;
 }
+
 label {
     margin-top: 10px;
     display: block;
     font-weight: bold;
 }
-input[type="number"], input[type="radio"] {
+
+input[type="number"],
+input[type="radio"] {
     margin: 5px 0 15px 0;
 }
+
 .bank-options {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .bank-option {
     text-align: center;
     margin: 10px;
 }
+
 .bank-option img {
     width: 100px;
     height: auto;
 }
+
 .back-button {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
-    color:
+    color: #007bff;
 }
+
 .back-button:hover {
     text-decoration: underline;
 }
+
 button {
-    background-color:
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 10px;
@@ -56,29 +67,34 @@ button {
     cursor: pointer;
     width: 100%;
 }
+
 button:hover {
-    background-color:
+    background-color: #0056b3;
 }
+
 .result {
     margin-top: 20px;
     padding: 15px;
-    background-color:
-    border: 1px solid
+    background-color: #e7f3fe;
+    border: 1px solid #b9e4fe;
     border-radius: 4px;
     display: none;
 }
+
 .back-button {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
-    color:
+    color: #007bff;
 }
+
 .bank-logo {
     width: 30px;
     height: auto;
     vertical-align: middle;
     margin-right: 10px;
 }
+
 .finance-button {
     display: flex;
     align-items: center;
@@ -87,20 +103,23 @@ button:hover {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    background-color:
+    background-color: #e67e22;
     color: white;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
+
 .finance-button:hover {
-    background-color:
+    background-color: #d35400;
 }
+
 .insurance-options {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
+
 .insurance-option {
     display: flex;
     flex-direction: column;
@@ -109,16 +128,19 @@ button:hover {
     text-align: center;
     margin-bottom: 20px;
 }
+
 .insurance-option img {
     width: 80px;
     height: auto;
     margin-bottom: 10px;
 }
+
 .insurance-option p {
     font-size: 1.1em;
-    color:
+    color: #333;
     margin: 0;
 }
+
 .warranty-section {
     display: flex;
     align-items: center;
@@ -127,75 +149,88 @@ button:hover {
     background-color: transparent;
     box-shadow: none;
 }
+
 .warranty-section label {
     font-weight: bold;
     font-size: 1.1em;
-    color:
+    color: #333;
     margin-right: 10px;
 }
+
 .warranty-section i {
     font-size: 1.5em;
-    color:
+    color: #007bff;
     margin-right: 8px;
 }
+
 .warranty-section select {
     width: 100%;
     padding: 10px;
-    border: 1px solid
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color:
+    background-color: #fff;
     font-size: 16px;
-    color:
+    color: #333;
 }
+
 .warranty-section select:focus {
-    border-color:
+    border-color: #007bff;
     outline: none;
 }
+
 .months-section {
     margin-top: 20px;
     padding: 0;
     background-color: transparent;
     box-shadow: none;
 }
+
 .months-section label {
     font-weight: bold;
     font-size: 1.1em;
-    color:
+    color: #333;
 }
+
 .months-section .input-wrapper {
     display: flex;
     align-items: center;
-    border: 1px solid
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color:
+    background-color: #fff;
     padding: 8px 12px;
 }
+
 .months-section .input-wrapper i {
     font-size: 1.2em;
-    color:
+    color: #007bff;
     margin-right: 8px;
 }
+
 .months-section input[type="number"] {
     flex: 1;
     padding: 10px;
     border: none;
     outline: none;
     font-size: 1em;
-    color:
+    color: #333;
 }
+
 .months-section input[type="number"]::placeholder {
-    color:
+    color: #999;
 }
-.bank-section label, .insurance-section label {
+
+.bank-section label,
+.insurance-section label {
     display: flex;
     align-items: center;
     font-weight: bold;
     font-size: 1.1em;
-    color:
+    color: #333;
 }
+
 .bank-section label i,
 .insurance-section label i {
     font-size: 1.3em;
-    color:
+    color: #007bff;
     margin-right: 8px;
 }
